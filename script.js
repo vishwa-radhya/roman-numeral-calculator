@@ -10,10 +10,12 @@ const calc =(input)=>{
     }else if(numInput <1){
         outP.classList.add('warn');
         outP.textContent = 'Please enter a number greater than or equal to 1.';
+        output.classList.remove('hidden');
         return;
     }else if(numInput > 3999){
         outP.classList.add('warn');
         outP.textContent='Please enter a number less than or equal to 3999.';
+        output.classList.remove('hidden');
         return;
     }else{
     outP.classList.remove('warn');
