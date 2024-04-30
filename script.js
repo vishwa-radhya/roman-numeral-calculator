@@ -8,7 +8,7 @@ const calc =(input)=>{
     if(input===''){
         alert('Please enter a valid number');
         return;
-    }else if(numInput ===0){
+    }else if(numInput <=0){
         outP.textContent = 'Please enter a number greater than or equal to 1.';
         outP.classList.add('warn');
         return;
