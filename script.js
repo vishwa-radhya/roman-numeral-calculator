@@ -3,20 +3,20 @@ const output = document.getElementById('output');
 const btn = document.getElementById('convert-btn');
 const outP = document.getElementById('opText');
 const calc =(input)=>{
-    outP.classList.remove('warn');
-    const numInput = parseInt(input);
+    const numInput = parseInt(input,10);
     if(input===''){
         alert('Please enter a valid number');
         return;
-    }else if(numInput <=0){
-        outP.textContent = 'Please enter a number greater than or equal to 1.';
+    }else if(numInput <1){
         outP.classList.add('warn');
+        outP.textContent = 'Please enter a number greater than or equal to 1.';
         return;
     }else if(numInput > 3999){
-        outP.textContent='Please enter a number less than or equal to 3999.';
         outP.classList.add('warn');
+        outP.textContent='Please enter a number less than or equal to 3999.';
         return;
-    }
+    }else{
+    outP.classList.remove('warn');
     let opTxt = '';
     let val = numInput;
     while(val>0){
@@ -63,6 +63,7 @@ const calc =(input)=>{
     }
     output.classList.remove('hidden');
     outP.textContent=opTxt;
+    }
 }
 btn.addEventListener('click',()=>{
     calc(inputNumber.value);
