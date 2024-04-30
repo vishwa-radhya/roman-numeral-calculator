@@ -1,7 +1,9 @@
+.warn{
+  color: red;
+}
 #output{
     border: 1.4px solid #d3f263;
     background-color: rgba(33, 24, 44, 0.842);
-    height: 10px;
     text-wrap: wrap;
     width: min(350px,100vw);
     margin: 20px auto;
